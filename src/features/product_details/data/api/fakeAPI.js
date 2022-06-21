@@ -5,8 +5,32 @@ import Category from "../model/Category";
 import Photo from "../model/Photo";
 import Option from "../model/Option";
 import ProductInList from "../model/ProductInList";
+import {createServer} from "miragejs";
 
-export default class FakeAPI{
+createServer({
+
+    routes() {
+        this.namespace = "api"
+
+        this.get("/product/:id", (schema, request) => {
+            let id = request.params.id;
+            fakeProduct.setId(id);
+            return fakeProduct;
+        });
+
+        this.get("/recommended/:page", (schema, request) => {
+            let page = request.params.page;
+            return productsRecommended;
+        });
+
+        this.post("/add_to_bag", (schema, request) => {
+            return {code:200}
+        })
+    },
+});
+
+
+/*export default class FakeAPI{
     static getProductById = async (id)=>{
         // fetch
         return new Promise( resolve=>{
@@ -26,11 +50,11 @@ export default class FakeAPI{
         )
     }
 
-    static addToBag = async (token, id)=>{
+    static putToBag = async (token, id)=>{
 
     }
 }
-
+*/
 const productsRecommended = [
     new ProductInList(2, "Basic t-shirt", 35, 0, "", 4),
     new ProductInList(3, "Basic t-shirt", 35, 15, "", 1),

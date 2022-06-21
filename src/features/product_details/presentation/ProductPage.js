@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import getProductById from "../domain/use_case/getProductById";
 
 class ProductPage extends Component {
 
@@ -7,6 +8,12 @@ class ProductPage extends Component {
         this.state = {
 
         }
+    }
+
+    componentDidMount() {
+        getProductById(2).then((result)=>{
+            console.log(result)
+        });
     }
 
     render() {
