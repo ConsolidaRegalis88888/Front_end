@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Cart-Container{
+    display:flex;
+}
+.Headline{
+    position: absolute;
+    width: 96px;
+    height: 54px;
+    left: 155px;
+    top: 170px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 54px;
+
+    letter-spacing: -1.6px;
+    color: #000000;
+}

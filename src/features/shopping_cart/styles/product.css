@@ -1,0 +1,12 @@
+.cartItem{
+    width: 850px;
+    height: 222px;
+    display: flex;
+    justify-content: space-between;
+}
+.imageBox{
+    width: 165px;
+    height: 200px;
+    text-align: center;
+    border: 1px black solid;
+}
