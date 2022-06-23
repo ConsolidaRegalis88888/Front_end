@@ -1,10 +1,23 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import Customer from "../models/Customer";
 
 const SignUp = () => {
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const customer = new Customer(event.target[1].value, event.target[2].value, event.target[0].value);
+
+        const response = await fetch(`/main/signup`, {method: 'POST', body: JSON.stringify(customer)})
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.log('Error: ' + error));
+    }
+
     return (
         <div>
-            <form>
-                <h2>Sign up</h2> <span>Already have an account?&nbsp;</span> <a>Sign in</a>
+            <form onSubmit={handleSubmit}>
+                <h2>Sign up</h2> <span>Already have an account?&nbsp;</span> <Link to="/main/signin">Sign in</Link>
                 <input type="text" placeholder="Name"/>
                 <input type="email" placeholder="Email"/>
                 <input type="password" placeholder="Password"/>
