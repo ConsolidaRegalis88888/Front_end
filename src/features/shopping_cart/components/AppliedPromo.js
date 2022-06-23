@@ -1,21 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import '../data/api/fakeAPI'
 
-const AppliedPromo = () => {
-    const [appliedPromo, setAppliedPromo] = useState({appliedPromo: {}});
-
-    useEffect(() => {
-        fetch('api/cart/summary/promos')
-            .then((res) => res.json())
-            .then((json) => {
-                setAppliedPromo(json.appliedPromo)
-            })
-            .catch((err) => console.log(err))
-    }, [])
-
+const AppliedPromo = (props) => {
     return (
         <div>
-            <p>{appliedPromo.name}</p>
+            <p>{props.promo.summary?.appliedPromos[0].name}</p>
             <button>Apply</button>
         </div>
     );
