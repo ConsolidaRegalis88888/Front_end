@@ -1,7 +1,7 @@
 import './App.css';
 import {Route, Routes, Link} from "react-router-dom";
 import MainPage from "./features/main_pages_detailes/presentation/MainPage";
-import Navbar from "./conponents/Navbar";
+import Navbar from "./components/Navbar";
 import SignIn from "./features/signin_detailes/Components/SignIn";
 import SignUp from "./features/signin_detailes/Components/SignUp";
 import Recovery from "./features/signin_detailes/Components/Recovery";
