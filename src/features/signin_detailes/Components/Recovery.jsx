@@ -1,13 +1,13 @@
 import React from 'react';
-import Customer from "../models/Customer";
+import User from "../models/User";
+import request from "../interceptors/request";
 
 const Recovery = () => {
         const handleSubmit = async (event) => {
             event.preventDefault();
-            const customer = new Customer(event.target[0].value);
-            const response = await fetch(`/main/recovery`, {method: 'POST', body: JSON.stringify(customer)})
-                .then(response => response.json())
-                .then(data => console.log(data))
+            const user = new User(event.target[0].value);
+            const recoveryPostRequest = request(`/main/recovery`, user, {method: 'POST'})
+                .then(response => window.sessionStorage.setItem('token', response.JWT))
                 .catch(error => console.log('Error: ' + error));
         }
 

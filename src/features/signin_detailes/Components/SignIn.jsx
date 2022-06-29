@@ -1,19 +1,19 @@
 import React from 'react';
-import Customer from "../models/Customer";
+import User from "../models/User";
 import '../fakeServer/FakeServer';
 import {Link} from "react-router-dom";
+import encodePassword from "../encoding/encodePassword";
+import request from "../interceptors/request";
 
 
 const SignIn = () => {
 
     const handleSubmit = async (event) => {
-            event.preventDefault();
-            const customer = new Customer(event.target[0].value, event.target[1].value);
-
-            const response = await fetch(`/main/signin`, {method: 'POST', body: JSON.stringify(customer)})
-                .then(response => response.json())
-                .then(data => console.log(data))
-                .catch(error => console.log('Error: ' + error));
+        event.preventDefault();
+        const user = new User(event.target[0].value, encodePassword(event.target[1].value));
+        const signInPostRequest = request(`/main/signin`, user, {method: 'POST'})
+            .then(response => window.sessionStorage.setItem('token', response.JWT))
+            .catch(error => console.log('Error: ' + error));
     }
 
     return (

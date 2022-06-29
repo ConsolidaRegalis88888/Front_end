@@ -1,4 +1,4 @@
-class Customer {
+class User {
     id
     login //CHAR(30)
     password //CHAR(50)
@@ -11,11 +11,11 @@ class Customer {
     address //(current address) String
     ip_address// Object {ipv4: CHAR(15), ipv6: CHAR(39)}
 
-    constructor(email, password, login) {
-        this.email = email;
-        this.password = password;
+    constructor(login, password, name) {
         this.login = login;
+        this.password = password;
+        this.name = name;
     }
 }
 
-export default Customer;
+export default User;

@@ -1,16 +1,17 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import Customer from "../models/Customer";
+import User from "../models/User";
+import encodePassword from "../encoding/encodePassword";
+import request from "../interceptors/request";
 
 const SignUp = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const customer = new Customer(event.target[1].value, event.target[2].value, event.target[0].value);
+        const user = new User(event.target[1].value, encodePassword(event.target[2].value), event.target[0].value);
 
-        const response = await fetch(`/main/signup`, {method: 'POST', body: JSON.stringify(customer)})
-            .then(response => response.json())
-            .then(data => console.log(data))
+        const signUpPostRequest = request(`/main/signup`, user, {method: 'POST'})
+            .then(response => window.sessionStorage.setItem('token', response.JWT))
             .catch(error => console.log('Error: ' + error));
     }
 

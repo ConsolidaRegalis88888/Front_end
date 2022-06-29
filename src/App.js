@@ -1,5 +1,4 @@
 import './App.css';
-import {Route, Routes, Link} from "react-router-dom";
 import MainPage from "./features/main_pages_detailes/presentation/MainPage";
 import Navbar from "./components/Navbar";
 import SignIn from "./features/signin_detailes/Components/SignIn";
@@ -21,7 +20,6 @@ function App() {
                 <Route path="/main/recovery" element={<Recovery/>}/>
             </Routes>
         </div>
-
     );
 }
 

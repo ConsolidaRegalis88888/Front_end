@@ -1,44 +1,64 @@
 import {createServer, Response, Model} from "miragejs";
+import {createJWT} from "./jwt";
 
 createServer({
     models: {
-        customer: Model,
-        token: Model
+        user: Model
     },
 
     routes() {
         this.urlPrefix = 'http://localhost:3000';
         this.post('/main/signin', (schema, request) => {
-                const email = (JSON.parse(request.requestBody)).email;
-                const user = schema.customers.findBy({email: email});
-                if (user != null)
-                    return user.id;
-                else
-                    return new Response(400, {}, {error: "Bad Request"});
-            });
-        this.post('/main/signup', (schema, request) => {
+            console.log(request)
             const login = (JSON.parse(request.requestBody)).login;
-            const email = (JSON.parse(request.requestBody)).email;
+            const user = schema.users.findBy({login: login});
+            if (user) {
+                const JWT = createJWT(
+                    {alg: "HS256", typ: "JWT"},
+                    {login: login, role: "user", exp: Date.now() + 60000},
+                    "secret"
+                )
+                return {JWT};
+            } else {
+                return new Response(400, {}, {error: "Bad Request"})
+            }
+        });
+        this.post('/main/signup', (schema, request) => {
+            const name = (JSON.parse(request.requestBody)).name;
+            const login = (JSON.parse(request.requestBody)).login;
             const password = (JSON.parse(request.requestBody)).password;
-            const user = schema.customers.findBy({email: email});
-            if (user == null) {
-                const customer = schema.customers.create({login: login, email: email, password: password});
-                return {access_token: '12345', refresh_token: '54321', customer_id: customer.id};
+            let user = schema.users.findBy({login: login});
+            if (!user) {
+                user = schema.users.create({name: name, login: login, password: password});
+                return {
+                    JWT: createJWT({alg: "HS256", typ: "JWT"}, {
+                        login: login,
+                        role: "user",
+                        exp: Date.now() + 60000
+                    })
+                };
             } else {
                 return new Response(400, {}, {error: "Bad Request"});
             }
         });
         this.post('/main/recovery', (schema, request) => {
-                const email = (JSON.parse(request.requestBody)).email;
-                const user = schema.customers.findBy({email: email});
-                if (user != null)
-                    return user.id;
-                else
-                    return new Response(400, {}, {error: "Bad Request"});
+            const login = (JSON.parse(request.requestBody)).login;
+            const user = schema.users.findBy({login: login});
+            if (user)
+                return {
+                    JWT: createJWT({alg: "HS256", typ: "JWT"}, {
+                        login: login,
+                        role: "user",
+                        exp: Date.now() + 60000
+                    })
+                };
+            else
+                return new Response(400, {}, {error: "Bad Request"});
         });
     },
     seeds(server) {
-        server.create("customer", {login: "Vano", email: "a@b.c", password: "12345"});
-        server.create("token", {customerID: 1, refreshToken: "qwerty"});
+        server.create("user", {login: "a@b.c", password: "MTIzNDU=", name: "Vano", role: "user"}); //password: "12345"
+        server.create("user", {login: "1@2.3", password: "MTIz", name: "Dany", role: "anonymous"}); //password: "123"
+        server.create("user", {login: "admin", password: "YWRtaW4=", name: "admin", role: "admin"}); //password: "admin"
     }
 });
