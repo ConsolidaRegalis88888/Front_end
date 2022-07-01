@@ -1,5 +1,4 @@
 import './App.css';
-import {Route, Routes, Link} from "react-router-dom";
 import Navbar from "./conponents/Navbar";
 import SignIn from "./features/signin_detailes/Components/SignIn";
 import SignUp from "./features/signin_detailes/Components/SignUp";

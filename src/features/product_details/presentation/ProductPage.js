@@ -1,25 +1,19 @@
-import React, {Component} from 'react';
+import React, {useEffect} from 'react';
+import {useParams} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+import {getProductAction} from "../redux/productActions";
 
-class ProductPage extends Component {
+const ProductPage = () => {
+    let {id} = useParams();
+    const dispatch = useDispatch();
+    const {product} = useSelector(state => state);
 
-    constructor(props) {
-        super(props);
-        this.state = {
-
-        }
-    }
-
-    render() {
-        if(this.state.product){
-            return (
-                <div>
-
-                </div>
-            );
-        } else {
-            return <h1>Loading...</h1>
-        }
-    }
-}
+    useEffect(()=>{
+        console.log(id);
+        dispatch(getProductAction(id));
+    },[id]);
+    return (product.loading)?<h1>Loading...</h1>:
+        <div>{JSON.stringify(product.data)}</div>
+};
 
 export default ProductPage;

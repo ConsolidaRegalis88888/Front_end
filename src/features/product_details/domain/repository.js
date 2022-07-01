@@ -9,7 +9,7 @@ export function productRepository(){
             });
         },
         getRecommended: async (page)=>{
-            const res = await FakeAPI.getProductById(id)
+            const res = await FakeAPI.getProductById(page)
             return new Promise(resolve=>{
                 resolve(res)
             });
