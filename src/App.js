@@ -20,6 +20,7 @@ function App() {
                 <Route path="/main/recovery" element={<Recovery/>}/>
             </Routes>
         </div>
+
     );
 }
 
