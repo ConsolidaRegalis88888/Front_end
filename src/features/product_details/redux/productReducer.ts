@@ -1,9 +1,10 @@
 import * as Actions from "./productActions"
+import {Action} from "../../../redux/Action";
 const initState = {
     loading: false, data: {}, error:""
 }
 export function productReducer(state = initState,
-                               action){
+                               action: Action){
     switch (action.type) {
         case Actions.TYPE_PRODUCT_LOAD:{
             return {...state, loading:true, data: {}};
