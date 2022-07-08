@@ -1,0 +1,174 @@
+.singlePost{
+    position: relative;
+    width: 1600px;
+    height: 4465px;
+    background: #FFFFFF;
+}
+
+.mainTitle h2{
+    position: absolute;
+    width: 850px;
+    height: 70px;
+    left: 375px;
+    top: 224px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 70px;
+    text-align: center;
+    color: #000000;
+}
+
+.dateOfPost_clock{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
+    position: absolute;
+    height: 20px;
+    left: 46.19%;
+    right: 46.19%;
+    top: 334px;
+
+}
+
+.dateOfPost{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    width: 94px;
+    height: 20px;
+    flex: none;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+}
+
+.clock{
+    width: 20px;
+    height: 20px;
+    flex: none;
+    order: 0;
+    align-self: flex-start;
+    flex-grow: 0;
+}
+
+.text1{
+    position: absolute;
+    width: 850px;
+    height: 300px;
+    left: 375px;
+    top: 410px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: -0.8px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.text2{
+    position: absolute;
+    width: 852px;
+    height: 120px;
+    left: 375px;
+    top: 824px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: -0.8px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.text3{
+    position: absolute;
+    width: 852px;
+    height: 150px;
+    left: 375px;
+    top: 1524px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: -0.8px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.text4{
+    position: absolute;
+    width: 852px;
+    height: 330px;
+    left: 375px;
+    top: 1788px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 30px;
+    letter-spacing: -0.8px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.titleInPost1{
+    position: absolute;
+    width: 483px;
+    height: 44px;
+    left: 375px;
+    top: 750px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -1.2px;
+    color: #000000;
+}
+
+.mainPostImage{
+    position: absolute;
+    width: 850px;
+    height: 500px;
+    left: 375px;
+    top: 984px;
+    border-radius: 10px;
+}
+
+.titleInPost2{
+    position: absolute;
+    width: 852px;
+    height: 44px;
+    left: 375px;
+    top: 1714px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -1.2px;
+    color: #000000;
+}
+
+.postImage1{
+    position: absolute;
+    width: 410px;
+    height: 662px;
+    left: 375px;
+    top: 2158px;
+    border-radius: 10px;
+}
+
+.postImage2{
+    position: absolute;
+    width: 410px;
+    height: 662px;
+    left: 815px;
+    top: 2158px;
+    border-radius: 10px;
+}

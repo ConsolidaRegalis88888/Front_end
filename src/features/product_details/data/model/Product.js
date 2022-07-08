@@ -31,4 +31,8 @@ export default class Product{
         this.photos = photos;
         this.options = options;
     }
+
+    setId(id) {
+        this.id = id;
+    }
 }

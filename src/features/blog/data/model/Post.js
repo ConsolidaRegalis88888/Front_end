@@ -1,14 +1,15 @@
 export default class Post
 {
-    idPost // String or number
-    mainTitle   //String
-    dateOfPost   //date or number
-    mainPostImage   //file
-
-    constructor(idPost, mainTitle, dateOfPost, mainPostImage) {
+    constructor(idPost, mainTitle, imageClock, dateOfPost, mainPostImage) {
         this.idPost = idPost;
         this.mainTitle = mainTitle;
+        this.imageClock = imageClock;
         this.dateOfPost = dateOfPost;
         this.mainPostImage = mainPostImage;
     }
+    idPost // String or number
+    mainTitle   //String
+    imageClock
+    dateOfPost   //date or number
+    mainPostImage   //file
 }
