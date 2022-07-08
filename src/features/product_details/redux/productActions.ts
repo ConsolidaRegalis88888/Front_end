@@ -1,7 +1,8 @@
 import getProductById from "../domain/use_case/getProductById";
+import Product from "../data/model/Product";
 
-export const getProductAction = (id) => {
-    return dispatch => {
+export const getProductAction = (id: string) => {
+    return (dispatch: Function) => {
         dispatch(productLoadAction());
         getProductById(id).then((data)=>{
                 dispatch(productLoadedAction(data));
@@ -20,12 +21,12 @@ export const productLoadAction = ()=>({
     type:TYPE_PRODUCT_LOAD
 });
 
-export const productLoadedAction = (data)=>({
+export const productLoadedAction = (data: Product)=>({
     type:TYPE_PRODUCT_LOADED,
     payload:data
 });
 
-export const productErrorAction = (message)=>({
+export const productErrorAction = (message: string)=>({
     type:TYPE_PRODUCT_ERROR,
     payload:message
 });

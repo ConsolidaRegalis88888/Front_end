@@ -1,9 +1,9 @@
 export default class Option{
-    id
-    name
-    product_id
+    id: string;
+    name: string;
+    product_id: string;
 
-    constructor(id, name, product_id) {
+    constructor(id: string, name: string, product_id: string) {
         this.id = id;
         this.name = name;
         this.product_id = product_id;

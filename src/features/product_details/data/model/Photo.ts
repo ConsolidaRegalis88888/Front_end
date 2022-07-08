@@ -1,9 +1,9 @@
 export default class Photo{
-    id
-    product_id
-    url
+    id: string;
+    product_id: string;
+    url: string;
 
-    constructor(id, product_id, url) {
+    constructor(id: string, product_id: string, url: string) {
         this.id = id;
         this.product_id = product_id;
         this.url = url;
