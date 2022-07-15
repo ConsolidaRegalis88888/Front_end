@@ -1,9 +1,10 @@
 import React from 'react';
-import User from "../models/User";
-import '../fakeServer/FakeServer';
+import User from "../../data/model/User";
+import '../../data/api/fakeAPI';
 import {Link} from "react-router-dom";
-import encodePassword from "../encoding/encodePassword";
-import request from "../interceptors/request";
+import encodePassword from "../../domain/encodePassword";
+import request from "../../domain/interceptors/request";
+import responseInterceptor from "../../domain/interceptors/responseInterceptor";
 
 
 const SignIn = () => {
@@ -12,7 +13,7 @@ const SignIn = () => {
         event.preventDefault();
         const user = new User(event.target[0].value, encodePassword(event.target[1].value));
         const signInPostRequest = request(`/main/signin`, user, {method: 'POST'})
-            .then(response => window.sessionStorage.setItem('token', response.JWT))
+            .then(response => responseInterceptor(response))
             .catch(error => console.log('Error: ' + error));
     }
 

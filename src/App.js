@@ -1,9 +1,9 @@
 import './App.css';
 import MainPage from "./features/main_pages_detailes/presentation/MainPage";
 import Navbar from "./components/Navbar";
-import SignIn from "./features/signin_detailes/Components/SignIn";
-import SignUp from "./features/signin_detailes/Components/SignUp";
-import Recovery from "./features/signin_detailes/Components/Recovery";
+import SignIn from "./features/signin_detailes/presentation/Components/SignIn";
+import SignUp from "./features/signin_detailes/presentation/Components/SignUp";
+import Recovery from "./features/signin_detailes/presentation/Components/Recovery";
 import ProductPage from "./features/product_details/presentation/ProductPage";
 import {Route, Routes} from "react-router-dom";
 import Main from "./Main";
@@ -19,7 +19,7 @@ function App() {
                 <Route path="/main/signup" element={<SignUp/>}/>
                 <Route path="/main/recovery" element={<Recovery/>}/>
             </Routes>
-        </div>
+        </div> 
 
     );
 }

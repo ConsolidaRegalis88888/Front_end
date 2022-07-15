@@ -1,6 +1,6 @@
 import React from 'react';
-import User from "../models/User";
-import request from "../interceptors/request";
+import User from "../../data/model/User";
+import request from "../../domain/interceptors/request";
 
 const Recovery = () => {
         const handleSubmit = async (event) => {

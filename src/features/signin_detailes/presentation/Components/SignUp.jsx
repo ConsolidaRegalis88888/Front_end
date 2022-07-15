@@ -1,8 +1,8 @@
 import React from 'react';
 import {Link} from "react-router-dom";
-import User from "../models/User";
-import encodePassword from "../encoding/encodePassword";
-import request from "../interceptors/request";
+import User from "../../data/model/User";
+import encodePassword from "../../domain/encodePassword";
+import request from "../../domain/interceptors/request";
 
 const SignUp = () => {
 

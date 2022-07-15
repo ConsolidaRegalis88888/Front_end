@@ -1,5 +1,6 @@
 import {createServer, Response, Model} from "miragejs";
 import {createJWT} from "./jwt";
+import requestInterceptor from "./requestInterceptor";
 
 createServer({
     models: {
@@ -10,9 +11,15 @@ createServer({
         this.urlPrefix = 'http://localhost:3000';
         this.post('/main/signin', (schema, request) => {
             console.log(request)
+            request = requestInterceptor(request);
+            if (request.requestHeaders.Authorization == 'Bearer unauthorized'){
+                return new Response(401,{},{error: 'user is unauthorized'})
+            }
             const login = (JSON.parse(request.requestBody)).login;
             const user = schema.users.findBy({login: login});
+            console.log('user: ' + user)
             if (user) {
+                console.log('inside if(user)')
                 const JWT = createJWT(
                     {alg: "HS256", typ: "JWT"},
                     {login: login, role: "user", exp: Date.now() + 60000},
@@ -20,7 +27,7 @@ createServer({
                 )
                 return {JWT};
             } else {
-                return new Response(400, {}, {error: "Bad Request"})
+                return new Response(400, {}, {error: "This user is not exist"})
             }
         });
         this.post('/main/signup', (schema, request) => {
@@ -43,7 +50,9 @@ createServer({
         });
         this.post('/main/recovery', (schema, request) => {
             const login = (JSON.parse(request.requestBody)).login;
+            console.log(login)
             const user = schema.users.findBy({login: login});
+            console.log(user)
             if (user)
                 return {
                     JWT: createJWT({alg: "HS256", typ: "JWT"}, {
