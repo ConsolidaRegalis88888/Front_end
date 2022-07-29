@@ -17,9 +17,10 @@ const AuthRedirect = () => {
     if (token) {
         if (base64decoder(token) == 'valid') { // or any 'valid' identificator
             return (
-                <Routes>
+                //TODO apply Route ?
+                {/*<Routes>
                     <Route path={"*"} element={<Navigate to="/main/signin"/>}/>
-                </Routes>
+                </Routes>*/}
             );
         }
     }
