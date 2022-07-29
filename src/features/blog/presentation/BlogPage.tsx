@@ -20,23 +20,15 @@ const BlogPage: React.FC = (props) => {
         dispatch(getSinglePostAction(idPost as string));
     }, [idPost]);
 
-    useEffect(() => {
+    /*useEffect(() => {
         console.log(idPost);
         dispatch(getAllPostsAction(allPosts));
-    }, [allPosts]);
+    }, [allPosts]);*/
 
     return (loading) ?
         <h1>Loading...</h1> :
         <div>
-            <SingleBlogPage
-                idPost={blog.idPost}
-                mainTitle={blog.mainTitle}
-                imageClock={blog.imageClock}
-                dateOfPost={blog.dateOfPost}
-                mainPostImage={blog.mainPostImage}
-                postImage1={blog.postImage1} postImage2={blog.postImage2}
-                postText1={blog.postText1} postText2={blog.postText2} postText3={blog.postText3} postText4={blog.postText4}
-                titleInPost1={blog.titleInPost1} titleInPost2={blog.titleInPost2}/>
+            <SingleBlogPage post={blog}/>
             <AllPosts/>
         </div>
 };

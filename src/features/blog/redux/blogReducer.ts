@@ -13,10 +13,18 @@ import image5 from "../data/assets/5.png";
 // @ts-ignore
 import clock from "../data/assets/clock.png";
 import {Action} from "../../../redux/Action";
-
-const initialState = {
+import SinglePost from "../data/model/SinglePost";
+import {BlogPageInfo} from "../../../redux/types";
+    //loading: Boolean,
+    //data: SinglePost,
+    //error: string,
+    //allPosts: Array<SinglePost>,
+const initialState:BlogPageInfo = {
     loading: false,
-    data: {
+    data:{idPost:"1", mainTitle: "Learning to love your mental health journey", imageClock: clock, dateOfPost: "07.08.2020", mainPostImage: "", postText1: "" ,titleInPost1 : "", postText2: "", postText3: '', titleInPost2: "", postText4: "", postImage1: "", postImage2: "" },
+    error: "",
+    allPosts: [{idPost:"1", mainTitle: "Learning to love your mental health journey", imageClock: clock, dateOfPost: "07.08.2020", mainPostImage: "", postText1: "" ,titleInPost1 : "", postText2: "", postText3: '', titleInPost2: "", postText4: "", postImage1: "", postImage2: "" }]
+    /*data: {
         posts:
             [
                 {idPost:"1", mainTitle: "Learning to love your mental health journey", imageClock: clock, dateOfPost: "07.08.2020", mainPostImage: "", postText1: "" ,titleInPost1 : "", postText2: "", postText3: '', titleInPost2: "", postText4: "", postImage1: "", postImage2: "" },
@@ -33,11 +41,10 @@ const initialState = {
                 {idPost:"11", mainTitle:"Train The Way You Want: Energise Your Routine with our Growing Library of Workout", imageClock: clock, dateOfPost: "07.08.2020", mainPostImage: image5, postText1: "" ,titleInPost1 : "", postText2: "", postText3: '', titleInPost2: "", postText4: "", postImage1: "", postImage2: "" },
             ]
 
-    },
-    error: ""
+    },*/
 }
 
-export function blogReducer(state = initialState, action: Action)
+export function blogReducer(state:BlogPageInfo = initialState, action: Action)
 {
     switch (action.type) {
         case Actions.TYPE_SINGLE_POST_LOAD: {

@@ -1,24 +1,20 @@
 import React from 'react';
 // @ts-ignore
 import styles from './singleBlogPage.module.css';
-interface BlogProps{
-    idPost: string
-    mainTitle: string
-    imageClock: any //string
-    dateOfPost: string
-    mainPostImage: any //string
-    postText1: string
-    titleInPost1: string
-    postText2: string
-    postText3: string
-    titleInPost2: string
-    postText4: string
-    postImage1: any
-    postImage2: any
+import {useParams} from "react-router-dom";
+import SinglePost from "../../data/model/SinglePost";
+interface Props{
+    post: SinglePost
 }
-const SingleBlogPage: React.FC<BlogProps> = ({mainTitle, imageClock, idPost,postImage1, mainPostImage, postImage2, postText2, postText4, postText3, postText1, titleInPost2, titleInPost1, dateOfPost}) => {
 
-    return <>
+const SingleBlogPage: React.FC<Props> = (props:Props) => {
+
+    let {idPost} = useParams<string>();
+
+    return <h1>Hello! {idPost}
+        {JSON.stringify(props.post)}</h1>
+
+    /*return <>
         <div className={styles.singlePost}>
             <div className={styles.mainTitle}>
                 <h2>{mainTitle}</h2>
@@ -40,7 +36,7 @@ const SingleBlogPage: React.FC<BlogProps> = ({mainTitle, imageClock, idPost,post
             </div>
 
         </div>
-    </>
+    </>*/
 };
 
 export default SingleBlogPage;
