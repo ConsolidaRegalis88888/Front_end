@@ -4,6 +4,8 @@ import ProductInList from "../data/model/ProductInList";
 import getRecommended from "../domain/use_case/getRecommended";
 
 export const getProductAction = (id: string):any => {
+
+export const getProductAction = (id: string) => {
     return (dispatch: Function) => {
         dispatch(productLoadAction());
         getProductById(id).then((data)=>{
