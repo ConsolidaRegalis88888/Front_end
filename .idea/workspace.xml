@@ -1,46 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="63b15dca-2f8f-42cd-86c5-857bd3564d14" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/features/blog/data/assets/Vector.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/blog/domain/use_case/getOnePost.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/blog/presentation/components/AllPosts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/blog/presentation/components/Post.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/blog/presentation/components/SingleBlogPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/blog/presentation/components/singleBlogPage.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/blog/redux/blogActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/blog/redux/blogReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/product_details/data/api/aPi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/product_details/redux/productActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/features/product_details/redux/productReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
+    <list default="true" id="63b15dca-2f8f-42cd-86c5-857bd3564d14" name="Changes" comment="working single blog page with styles. in process other pages in blog">
+      <change afterPath="$PROJECT_DIR$/src/features/blog/data/repository/BlogNetworkRepository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/product_details/data/repository/ProductNetworkRepository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/product_details/domain/use_case/getRecommended.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/product_details/presentation/NewsSubscribeSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/product_details/presentation/ProductInfo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/product_details/presentation/ProductPage.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/product_details/presentation/RecommendedSection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/Action.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/redux/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/api/fakeAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/api/fakeAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/Base.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/Base.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/circle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/circle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/facebook.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/facebook.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/instagramm.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/instagramm.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/images/twitter.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/twitter.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/model/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/model/Post.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/data/model/SinglePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/model/SinglePost.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/domain/BlogRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/domain/BlogRepository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/presentation/BlogPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/presentation/BlogPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/product_details/data/api/fakeAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/data/api/fakeAPI.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/product_details/data/model/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/data/model/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/product_details/domain/repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/domain/repository.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/product_details/presentation/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/presentation/ProductPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/data/api/fakeAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/api/fakeAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/data/assets/Vector.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/assets/clock.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/data/model/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/model/Post.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/data/model/SinglePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/model/SinglePost.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/data/model/Subscription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/data/model/Subscription.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/domain/BlogRepository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/domain/BlogRepository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/domain/use_case/getAllPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/domain/use_case/getAllPosts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/domain/use_case/getOnePost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/domain/use_case/getOnePost.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/presentation/BlogPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/presentation/BlogPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/presentation/components/AllPosts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/presentation/components/AllPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/presentation/components/Post.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/presentation/components/Post.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/presentation/components/SingleBlogPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/presentation/components/SingleBlogPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/redux/blogActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/redux/blogActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/redux/blogReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/redux/blogReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/data/api/fakeAPI.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/data/api/fakeAPI.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/data/model/Category.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/data/model/Category.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/data/model/Manufacturer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/data/model/Manufacturer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/data/model/Option.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/data/model/Option.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/data/model/Photo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/data/model/Photo.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/data/model/Points.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/data/model/Points.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/data/model/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/data/model/Product.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/data/model/ProductInList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/data/model/ProductInList.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/data/model/Tag.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/data/model/Tag.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/domain/repository.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/domain/repository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/domain/use_case/getProductById.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/domain/use_case/getProductById.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/presentation/ProductPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/presentation/ProductPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/redux/productActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/redux/productActions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/product_details/redux/productReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/product_details/redux/productReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/general/footer/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/general/footer/Footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,8 +56,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -63,8 +71,19 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
   </component>
   <component name="ProjectId" id="2AstqeZRUDk6VPsAVnjgltyKlX6" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -76,16 +95,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ElenaProjects/react-my-social-network" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="C:\Users\kitse\WebstormProjects\Project\e_commerce\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kitse\WebstormProjects\Project\e_commerce\src\redux" />
       <recent name="C:\Users\kitse\WebstormProjects\Project\e_commerce\src\features\blog\presentation\components" />
       <recent name="C:\Users\kitse\WebstormProjects\Project\e_commerce\src\features\blog\data\assets" />
       <recent name="C:\Users\kitse\WebstormProjects\Project\e_commerce\src\features\product_details\data\api" />
@@ -117,7 +137,22 @@
       <workItem from="1656933615170" duration="1362000" />
       <workItem from="1657033055196" duration="5052000" />
       <workItem from="1657206272021" duration="10740000" />
-      <workItem from="1657260032769" duration="691000" />
+      <workItem from="1657260032769" duration="6038000" />
+      <workItem from="1657435676591" duration="1070000" />
+      <workItem from="1657537033495" duration="1202000" />
+      <workItem from="1657790663911" duration="4508000" />
+      <workItem from="1657864612959" duration="5166000" />
+      <workItem from="1657977994678" duration="1365000" />
+      <workItem from="1657979375140" duration="20000" />
+      <workItem from="1658404192306" duration="1453000" />
+      <workItem from="1658405656532" duration="466000" />
+      <workItem from="1658418981865" duration="2847000" />
+      <workItem from="1658728120490" duration="1271000" />
+      <workItem from="1658760094874" duration="4285000" />
+      <workItem from="1658768274004" duration="881000" />
+      <workItem from="1658906280353" duration="15700000" />
+      <workItem from="1659041673816" duration="4661000" />
+      <workItem from="1659073832317" duration="1030000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1655812495795</created>
@@ -126,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655812495795</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="working single blog page with styles. in process other pages in blog">
+      <created>1657261166830</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657261166830</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +190,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="blog/dev" />
+                        <option value="origin/blog/dev" />
                       </list>
                     </value>
                   </entry>
@@ -172,6 +214,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="working single blog page with styles. in process other pages in blog" />
+    <option name="LAST_COMMIT_MESSAGE" value="working single blog page with styles. in process other pages in blog" />
   </component>
 </project>
